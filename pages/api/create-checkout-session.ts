@@ -9,7 +9,7 @@ if (!stripeSecretKey) {
 
 // Modern Stripe initialization: use the Node SDK v12+ pattern with explicit API version
 const stripe = new Stripe(stripeSecretKey, {
-  apiVersion: "2024-06-20",
+  apiVersion: "2025-12-15.clover",
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -50,8 +50,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     return res.status(200).json({ url: session.url });
-  } catch (error: any) {
-    console.error("Error creating Stripe Checkout Session", error);
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error creating Stripe Checkout Session", error.message);
+      return res.status(500).json({ error: error.message });
+    } else {
+      console.error("Error creating Stripe Checkout Session", error);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+    
   }
 }

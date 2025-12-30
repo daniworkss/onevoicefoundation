@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { HeartPulse, GraduationCap, Building2 } from "lucide-react";
+import { HeartPulse } from "lucide-react";
 import { SlideUp } from "@/components/animation/MotionWrappers";
 
 export default function ProgramsPage() {

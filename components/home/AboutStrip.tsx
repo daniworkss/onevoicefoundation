@@ -10,7 +10,7 @@ export default function AboutStrip() {
           {/* Image placeholder */}
           <SlideUp>
             <div className="relative h-64 w-full md:h-72 lg:h-80 flex items-center justify-center">
-            <Image src={'https://res.cloudinary.com/dccph2plo/image/upload/v1767119333/Nigeria-Youth-Activism-ed_gdsea3.jpg'} fill priority className=""/>
+            <Image src={'https://res.cloudinary.com/dccph2plo/image/upload/v1767119333/Nigeria-Youth-Activism-ed_gdsea3.jpg'} fill priority className="" alt="about-image"/>
             </div>
           </SlideUp>
 
