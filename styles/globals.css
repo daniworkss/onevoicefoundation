@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+
+  /* Brand colors */
+  --ov-primary-bg: #ffffff;
+  --ov-secondary-green: #0b3b2b; /* semi-dark green */
+  --ov-secondary-green-soft: #d7efe6;
+  --ov-secondary-green-deep: #062116;
+  --ov-border: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  margin: 0;
+  background: var(--ov-primary-bg);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Font utility classes */
+.heading-display {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.font-dm-sans {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.hero-title {
+  font-family: var(--font-archivo-black), system-ui, sans-serif;
+  /* letter-spacing: 0.05em; */
+}
+
+/* Layout helpers */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  flex-shrink: 0;
+}
+
+/* Subtle background pattern for hero sections */
+/* .hero-sec{
+  
+    width: 100%;
+    height: 400px; 
+    background-image: url("/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  } */
+  
+ 
+
+.hero-pattern {
+  position: relative;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(circle at 0 0, rgba(11, 59, 43, 0.12), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.06), transparent 55%);
+}
+
+/* CTA section photo background using same image (optional) */
+.cta-photo {
+  background-image:
+    linear-gradient(to right, rgba(6, 33, 22, 0.96), rgba(6, 33, 22, 0.9), rgba(0, 0, 0, 0.92));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Image placeholder frame for future photography */
+.image-frame {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px dashed rgba(15, 23, 42, 0.2);
+  background: radial-gradient(circle at top left, rgba(11, 59, 43, 0.07), transparent 55%),
+    #f9fafb;
+  overflow: hidden;
+}
+
+.image-frame-label {
+  position: absolute;
+  inset: auto 1rem 1rem auto;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
