@@ -55,7 +55,7 @@ export default function AboutPage() {
             <div className="space-y-4 text-sm text-neutral-800 font-dm-sans md:text-base">
               <p>
                 One Voice Foundation Inc. is a non-profit organization established by Nigerians living abroad
-                who remain deeply connected to the realities back home. We are professionals, parents,
+                who remain deeply connected to the realities back home. We are professionals,
                 community members, and advocates who share a simple belief: every young person in Nigeria
                 deserves access to health, education, and opportunity.
               </p>

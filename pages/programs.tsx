@@ -52,7 +52,7 @@ export default function ProgramsPage() {
                 Youth Health Insurance Initiative
               </h2>
               <p className="mt-3 text-sm font-dm-sans text-neutral-700 md:text-base">
-                Goal: Provide health insurance to 200+ Nigerian youth annually.
+                Goal: Provide health insurance to 200+ Nigerian youth annually. This number will grow as we continue to expand our partnerships and funding.
               </p>
               <p className="mt-4 text-sm text-neutral-700 font-dm-sans md:text-base">
                 Access to healthcare should never be a privilege reserved for a few. Through this initiative,

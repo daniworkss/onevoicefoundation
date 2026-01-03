@@ -58,7 +58,7 @@ export default function Footer() {
               Contact
             </h3>
             <p className="text-neutral-300 text-sm">
-              Email: <span className="font-medium text-white">info@onevoicefoundation-ovf.com</span>
+              Email: <span className="font-medium text-white">contact@onevoicefoundationinc.org </span>
             </p>
             <div className="flex flex-wrap gap-2 text-[11px] text-neutral-300">
               <span className="rounded-full border border-neutral-700 px-3 py-1">Facebook</span>
