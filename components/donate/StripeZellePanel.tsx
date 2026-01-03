@@ -43,6 +43,7 @@ export default function StripeZellePanel() {
 
       // Modern approach: simply redirect the browser to the Checkout Session URL
       window.location.href = url;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       console.error(err);
       setError(err.message || "Something went wrong starting checkout.");
@@ -116,7 +117,7 @@ export default function StripeZellePanel() {
         </form>
       </div>
 
-      <div className="rounded-2xl bg-neutral-50 p-6 ring-1 ring-[var(--ov-border)]">
+      {/* <div className="rounded-2xl bg-neutral-50 p-6 ring-1 ring-[var(--ov-border)]">
         <h3 className="text-base font-semibold text-neutral-900">Donate via Zelle</h3>
         <p className="mt-2 text-sm text-neutral-600 font-dm-sans">
           If you prefer, you can send your donation via Zelle. Please use the details below and include
@@ -129,7 +130,7 @@ export default function StripeZellePanel() {
             Replace this with your organization&apos;s actual Zelle phone number or email in production.
           </p>
         </div>
-      </div>
+      </div> */}
     </SlideUp>
   );
 }
