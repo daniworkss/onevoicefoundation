@@ -2,6 +2,29 @@ import Head from "next/head";
 import Image from "next/image";
 import { SlideUp } from "@/components/animation/MotionWrappers";
 
+const founders = [
+  {
+    name: "Chike Ezeosim",
+    image:
+      "https://res.cloudinary.com/dccph2plo/image/upload/v1768161489/WhatsApp_Image_2026-01-11_at_8.52.43_PM_gjx1su.jpg",
+  },
+  {
+    name: "Emeka Onyeiwu",
+    image:
+      "https://res.cloudinary.com/dccph2plo/image/upload/v1768161488/WhatsApp_Image_2026-01-11_at_8.52.43_PM_1_gnbrgh.jpg",
+  },
+  {
+    name: "Collins Idedevbo",
+    image:
+      "https://res.cloudinary.com/dccph2plo/image/upload/v1768161488/WhatsApp_Image_2026-01-11_at_8.52.43_PM_2_w7aj1o.jpg",
+  },
+  {
+    name: "Michael Majekodunmi",
+    image:
+      "https://res.cloudinary.com/dccph2plo/image/upload/v1768161687/WhatsApp_Image_2026-01-11_at_8.52.44_PM_oyaklq.jpg",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -24,14 +47,14 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-[var(--ov-secondary-green-deep)]/70 mix-blend-multiply" />
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
-          <SlideUp className="max-w-2xl">
+          <SlideUp className="max-w-2xl lg:flex lg:justify-center lg:items-center lg:flex-col lg:max-w-5xl ">
             <p className="font-dm-sans text-xs uppercase tracking-[0.25em] text-[var(--ov-secondary-green-soft)]">
               About Us
             </p>
-            <h1 className="mt-4 text-3xl font-semibold text-white md:text-4xl lg:text-[2.6rem]">
+            <h1 className="mt-4 text-3xl font-semibold text-white md:text-4xl lg:text-[3rem] lg:text-center ">
               One Voice for Nigeria&apos;s Youth and Future
             </h1>
-            <p className="mt-4 max-w-xl text-sm text-white/85 font-dm-sans md:text-base">
+            <p className="mt-4 max-w-xl text-sm text-white/85 font-dm-sans md:text-base lg:text-center">
               One Voice Foundation Inc. is committed to strengthening the future of Nigeria by supporting its
               youth today. Founded by Nigerians in the diaspora, we believe that distance does not erase
               responsibility.
@@ -68,6 +91,49 @@ export default function AboutPage() {
                 One Voice Foundation Inc. is a non-profit organization founded by Nigerians in the diaspora
                 who believe distance does not erase responsibility.
               </p>
+            </div>
+          </div>
+        </SlideUp>
+      </section>
+
+      {/* Meet the Founders */}
+      <section className="border-b border-[var(--ov-border)] bg-white">
+        <SlideUp className="mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-16">
+          <div className="flex flex-col items-center gap-10">
+            <div className="text-left w-full md:max-w-xl lg:max-w-5xl lg:text-center">
+              <p className="font-dm-sans text-xs uppercase tracking-[0.25em] text-[var(--ov-secondary-green)]">
+                Meet the founders
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold text-neutral-900 md:text-3xl">
+                Faces behind the vision
+              </h2>
+              <p className="mt-4 text-sm text-neutral-700 font-dm-sans md:text-base">
+                Dedicated Nigerians in the diaspora who believe in a future where every young person has the
+                chance to thrive.
+              </p>
+            </div>
+
+            <div className="grid w-full gap-6 sm:grid-cols-2">
+              {founders.map((founder, index) => (
+                <article
+                  key={`${founder.name}-${index}`}
+                  className="group overflow-hidden rounded-2xl border border-[var(--ov-border)] bg-black shadow-sm w-full  lg:w-[80%] lg:mx-auto"
+                >
+                  <div className="relative h-[500px] w-full md:h-[460px]">
+                    <Image
+                      src={founder.image}
+                      alt={founder.name}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col">
+                      <p className="text-sm  lg:text-2xl font-semibold text-white">{founder.name}</p>
+                     
+                    </div>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </SlideUp>

@@ -62,7 +62,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap gap-2 text-[11px] text-neutral-300">
               <span className="rounded-full border border-neutral-700 px-3 py-1">Facebook</span>
-              <span className="rounded-full border border-neutral-700 px-3 py-1">Instagram</span>
+              <span className="rounded-full border border-neutral-700 px-3 py-1">onevoicefoundation.ovf</span>
             </div>
           </div>
         </div>
